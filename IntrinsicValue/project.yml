@@ -1,0 +1,39 @@
+# XcodeGen Project Configuration
+# Install XcodeGen: brew install xcodegen
+# Run: xcodegen generate
+
+name: IntrinsicValue
+
+options:
+  bundleIdPrefix: com.intrinsic
+  deploymentTarget:
+    iOS: "16.0"
+  
+settings:
+  INFOPLIST_FILE: IntrinsicValue/Info.plist
+
+targets:
+  IntrinsicValue:
+    type: application
+    platform: iOS
+    
+    settings:
+      PRODUCT_NAME: IntrinsicValue
+      PRODUCT_BUNDLE_IDENTIFIER: com.intrinsic.IntrinsicValue
+      INFOPLIST_FILE: IntrinsicValue/Info.plist
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      SWIFT_VERSION: "5.9"
+      IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+      TARGETED_DEVICE_FAMILY: "1"  # iPhone only
+      SUPPORTS_MACCATALYST: false
+      
+    sources:
+      - IntrinsicValue
+      
+    info:
+      path: IntrinsicValue/Info.plist
+      
+    scheme:
+      testTargets: []
+      gatherCoverageData: false
+
